@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>AVINYA</title>
+    <link rel="shortcut icon" href="favicon-32x32.png">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet" >
+<script src="https://kit.fontawesome.com/a98995c987.js" crossorigin="anonymous"></script>
+  <title>Events Registration Form.</title>
+  </head>
+  <style media="screen">
+    body {
+  font-family: "Raleway", sans-serif;
+  background-color:black;
+}
+.header
+{
+  min-height: 100vh;
+  width:100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img
+{
+  width: 100px;
+}
+.nav-links
+{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after
+{
+  content:'';
+  width:0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition:0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+@media(max-width: 700px) {
+  .text-box h1{
+    font-size: 20px;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    background: #f44336;
+    height:100vh;
+    width:200px;
+    top: 0;
+    right:-210px;
+    text-align:left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa-solid{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding:30px;
+  }
+}
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  color:white;
+}
+form {
+  width: 70%;
+  margin: auto;
+}
+fieldset {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 5px #333;
+  background-color: #eee;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],input[type="email"],select{
+  width: calc(100% - 20px);
+  height: 20px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+button{
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  align-items:center;
+  float: right;
+  position: absolute;
+  right: 50%;
+  margin: auto !important;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #eee;
+  font-size:20px;
+}
+.btn1
+{
+  float: right;
+  position: absolute;
+  right: 40%;
+}
+.hmpg{
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  align-items:center;
+  float: right;
+  position: absolute;
+  right: 30%;
+  margin: auto !important;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #eee;
+  font-size:20px;
+}
+.hmpg a{
+text-decoration:none;
+}
+.hmpg a:hover {
+  color:white;
+}
+.btn:hover ,.hmpg:hover,.btn1:hover
+{
+ color:white;
+ background-color:red;
+}
+.event-registration
+{
+  position: absolute;
+  right:15%;
+  top: 20%;
+  width:70%;
+}
+u{
+  color: red;
+}
+@media(max-width: 700px)
+{
+  h1{
+    font-size:20px;
+  }
+  .event-registration
+  {
+    position: absolute;
+    right:0%;
+    top: 20%;
+    width:100%;
+  }
+  .hmpg{
+    right: 25%;
+  }
+  select{
+    width: 70%;
+    height: 30%;
+  }
+}
+label { display: inline-block; }
+  </style>
+<body>
+  <div id="home"class="header">
+    <nav>
+      <a href="index.html"><img src="logo.png" alt="logo"></a>
+      <div id="navLinks" class="nav-links" >
+<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#event">EVENT</a></li>
+          <li><a href="registration.html">registration</a></li>
+          <li><a href="adminlogin.php">Admin</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+<i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    </div>
+  </div>
+    <div id="event-registration" class="event-registration">
+      <h1>Registration</h1>
+      <form id="form1"  action="">
+        <!-- Form contents will go here -->
+        <fieldset>
+          <h3>user Information</h3>
+          <label for="last-name">Email:</label>
+          <input type="email" id="email" name="email" required/>
+          <label for="first-name">Name of the student:</label>
+          <input type="text" id="my_name" name="my_name" required/>
+          <label for="hno">Hall ticket no:</label>
+          <input type="text" id="my_name" name="my_name" required/>
+            <label for="branch">BRANCH:</label>
+          <select id="branches" onchange="EnableDisableTextBox(this)">
+              <option class="options" value="1">CSE</option>
+              <option value="2">CSM</option>
+              <option value="3">EEE</option>
+              <option value="4">ECE</option>
+              <option value="5">Mechanical</option>
+              <option value="6">Civil</option>
+              <option value="7">Mining</option>
+              <option value="8" >Other</option>
+            </select>
+            <br>
+            Other:
+   <input type="text" id="txtOther" disabled="disabled" />
+          <label for="c_name">collage name:</label>
+          <input type="text" id="collage_name" name="collage-name" required/>
+          <label for="c_code">collage code:</label>
+          <input type="text" id="collage_code" name="code" required/>
+          <br>
+
+          <h3>Fees structure</h3>
+    <div id="catlist">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <input type="checkbox" id="fee_1" name="fee_1" value="1" price="1500">
+        <label for="event_1">Registration Fees</label><br>
+     <input type="checkbox" name="fee_2"id="fee_2" value="2" price="200" >
+     <label for="fee_2">Stall fees</label><br>
+     <input type="checkbox" name="fee_3" id="fee_3" value="3" price="305">
+     <label for="fee_3" >Event fees</label><br>
+     <!-- <input type="checkbox" id="event_4"  name="event_4" value="event_4" price="400" >
+     <label for="event_4">event 4</label><br> -->
+     <input type="checkbox" name="fee_4" id="fee_4" value="4" price="0" >
+     <label for="fee_4">others</label>
+<br>
+    <label for="total_price"> Total fees:</label>
+    <input width="auto"type="text" id="total" value="0" /><br>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Submit</button>
+          <button type="reset" class="btn1">clear</button>
+        <button type="submit" class="hmpg" onclick="window.location = 'index.html';" ><a href="index.html">return</a></button>
+
+      </div>
+</form>
+<script type="text/javascript">
+  var navLinks=document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right="0";
+  }
+  function hideMenu(){
+    navLinks.style.right="-250px";
+  }
+  function calcAndShowTotal() {
+    var total = 0;
+    $('#catlist :checkbox:checked').each(function() {
+      total += parseFloat($(this).attr('price')) || 0;
+    });
+    $('#total').val(total);
+  }
+  $('#catlist :checkbox').change(calcAndShowTotal).change();
+</script>
+<script type="text/javascript">
+function EnableDisableTextBox(branches) {
+          var selectedValue = branches.options[branches.selectedIndex].value;
+          var txtOther = document.getElementById("txtOther");
+          txtOther.disabled = selectedValue ==8 ? false : true;
+          if (!txtOther.disabled) {
+              txtOther.focus();
+          }
+        }
+</script>
+  <body>
+
+  </html>
